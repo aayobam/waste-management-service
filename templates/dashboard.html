@@ -4,44 +4,39 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="stylesheet" href="/assets/css/styles.css" />
 
         <!--favicon-->
         <link rel="icon" type="image/png" href="assets/images/interswitch_logo.svg" />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
         
         <!-- Animate CSS CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <title>Site Home | User Dashboard</title>
+        <title>Site Home | Admin Dashboard</title>
     </head>
 
     <body>
 
         <!--dashboard container-->
         <div class="dashboard">
-            <section id="menu">
+            <section id="sidebar" class="initial-active hide">
                 <div class="logo">
-                    <a href="#menu">
+                    <a href="#">
                         <img src="/assets/images/interswitch_logo.svg" alt="dashboard logo">
                     </a>
                 </div>
     
                 <div class="items">
-                    <li><i class="fa-solid fa-user"></i><a href="#">Profile</a></li>
+                    <li><i class="fa-solid fa-user"></i><a href="#">Users</a></li>
                     <li><i class="fas fa-cart-plus"></i></i><a href="#">Orders</a></li>
-                    <li><i class="fa-solid fa-user"></i><a href="#">Item 3</a></li>
-                    <li><i class="fa-solid fa-parachute-box"></i><a href="#">Item 4</a></li>
-                    <li><i class="fa-solid fa-user"></i><a href="#">Item 5</a></li>
-                    <li><i class="fa-solid fa-parachute-box"></i><a href="#">Item 6</a></li>
                 </div>
             </section>
     
             <section id="main">
                 <div class="navigation">
-                    
                     <div class="row">
                         <div class="menu-btn">
                             <i id="menu-btn" class="fas fa-bars"></i>
@@ -324,8 +319,17 @@
             </section>
         </div>
 
+        <script>
+            // admin dashboard menu bar selection.
+            const menuButton = document.getElementsByClassName("menu-btn")[0];
+            const sideBar = document.getElementById('sidebar');
 
+            menuButton.addEventListener('click', () => {
+                document.getElementById('main').style="margin-left: calc(100%-170px)";
+                sideBar.classList.toggle('hide'); 
+            });
+        </script>
         <!-- Website scripts -->
-        <script src="assets/js/script.js"></script>
+        <script src="/assets/js/script.js"></script>
     </body>
 </html>

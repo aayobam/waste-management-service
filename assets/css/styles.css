@@ -66,51 +66,51 @@ nav {
 }
   
 nav #home-logo {
-max-height: auto;
-width: 150px;
+    max-height: auto;
+    width: 150px;
 }
 
 nav a {
-color: whitesmoke;;
-transition: var(--transition);
+    color: whitesmoke;;
+    transition: var(--transition);
 }
 
 nav a:hover {
-color: var(--secondary-color);
-border-bottom: 2px solid var(--secondary-color);
-border: none;
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    border: none;
 }
 
 nav ul {
-display: flex;
-gap: 1.9rem;
+    display: flex;
+    gap: 1.9rem;
 }
 
 nav ul li {
-font-weight: var(--bold-font);
+    font-weight: var(--bold-font);
 }
 
 .toggle-button {
-position: absolute;
-display: none;
-flex-direction: column;
-top: 2.2rem;
-right: 1rem;
-justify-content: space-between;
-width: 30px;
-height: 21px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 2.2rem;
+    right: 1rem;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
 }
 
 .toggle-button .bar{
-height: 3px;
-width: 100%;
-background-color: white;
-cursor: pointer;
-border-radius: 10px;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 .active{
-display: flex;
+    display: flex;
 }
 
 /* Navbar ends */
@@ -266,6 +266,7 @@ footer{
     padding: 1.25rem;
     text-align: center;
     margin: 2rem 0 0;
+    color: var(--primary-white);
 }
 
 footer .socials{
@@ -310,7 +311,7 @@ footer .socials{
     }
 
     .hide{
-        display: none;
+        display: none !important;
     }
 
     .navbar-links{
@@ -416,7 +417,8 @@ footer .socials{
 .dashboard{
     display: flex;
 }
-.dashboard #menu{
+
+.dashboard #sidebar{
     height: 100%;
     width: 200px;
     background-color: var(--primary-color);
@@ -425,36 +427,36 @@ footer .socials{
     left: 0;
 }
 
-#menu .logo{
+#sidebar .logo{
     display: flex;
     align-items: center;
     color: #fff;
     padding: 30px 0px 0px 30px;
 }
 
-#menu .logo img{
+#sidebar .logo img{
     width: 130px;
     margin-right: 15px;
 }
 
-#menu .items{
+#sidebar .items{
     margin-top: 40px;
 }
 
-#menu .items li{
+#sidebar .items li{
     padding: 15px;
 }
 
-#menu .items li:hover{
+#sidebar .items li:hover{
     background: #3e3c49a5;
     cursor: pointer;
     transform: var(--transition);
 }
-#menu .items li:nth-child(1){
+#sidebar .items li:nth-child(1){
     border-left: 4px solid whitesmoke;
 }
 
-#menu .items li i{
+#sidebar .items li i{
     color: rgb(134, 141, 151);
     width: 30px;
     height: 20px;
@@ -464,7 +466,7 @@ footer .socials{
     margin:0 10px 0 25px;
 }
 
-#menu .items li a{
+#sidebar .items li a{
     color: #fff;
     font-weight: 300px;
 }
@@ -538,7 +540,6 @@ footer .socials{
     border-radius: 50px;
     object-fit: cover;
 }
-
 
 .i-name{
     color: var(--primary-color);
@@ -686,18 +687,85 @@ tbody tr td{
     color: var(--secondary-white);
 }
 
+.initial-active{
+    display: inline-block;
+}
 /* end of user dasboard style*/
 
+
 /* start of media queries for admin dashboard */
-@media screen {
-    
+@media only screen and (max-width:1029.33px){
+    .cards{
+        justify-content: flex-start;
+    }
+
+    .cards .card{
+        padding: 16px 20px;
+        margin: 10px 20px 10px 0;
+    }
+}
+
+@media only screen and (max-width:746px) {
+    .dashboard #main{
+        width: 100%;
+        margin-left: 0px;
+        display: inline-block;
+    }
+
+    .dashboard #sidebar{
+        width: 170px;
+        background-color: var(--primary-color);
+        position: fixed;
+    }
+
+    #main .navigation{
+        width: 100%;
+    }
+
+    #menu-btn{
+        display: initial;
+    }
+
+    .cards{
+        padding: 30px 30px 0 30px;
+        justify-content: flex-start;
+    }
+
+    .cards .card{
+        padding: 16px 20px;
+        margin: 10px 20px 10px 0;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .board{
+        width: 92%;
+        padding: 0;
+        overflow-x: auto;
+    }
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+    }
+}
+
+@media only screen and (max-width:584px){
+    .board{
+        width: 92%;
+        padding: 0;
+        overflow-x: auto;
+    }
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+    }
 }
 /* end of media queries for admin dashboard */
 
 
-
 /* start of order style*/
-
 .order-section{
     display: flex;
     height: 80vh;
@@ -748,21 +816,81 @@ tbody tr td{
 
 /*payment success container*/
 .success-container{
-    width: 80%;
-    margin: auto;
-    min-height: 60vh;
     display: flex;
+    border-radius: 10px;
+    padding: 1rem;
     flex-direction: column;
+    height: 50vh;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 30px;
     align-items: center;
-    justify-content: center;
+    background-color: #eef0f3;
 }
 
-.success-container .fa-thin{
-    font-size: 30px;
+.success-container .fa-circle-check{
+    font-size: 100px;
+    color: #38CC8C;
     padding: 10px;
 }
 
-.fa-circle-check{
-    color: green;
+.success-container p, small{
+    color: #38CC8C;
+}
+
+.success-container hr{
+    width: 105%;
+}
+
+.success-container .amount{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary-shadow);
+    align-items: flex-start;
+}
+
+.success-container .payment-type{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary-shadow);
+    align-items: flex-start;
+}
+
+@media only screen and (max-width: 700px){
+    .success-container{
+        display: flex;
+        width: 80%;
+    }
 }
 /*end of payment success container*/
+
+
+/*start payment failure container style */
+.failure-container{
+    display: flex;
+    border-radius: 10px;
+    padding: 1rem;
+    flex-direction: column;
+    height: 50vh;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.failure-container .fa-file-circle-minus{
+    align-items: flex-start;
+    font-size: 100px;
+    color: var(--secondary-color);
+    padding: 10px;
+}
+
+.failure-container p{
+    color: var(--secondary-color);
+}
+
+/* end of payment failure container style */
