@@ -12,6 +12,7 @@
   --secondary-color: #ff7235;
   --primary-shadow: #8b8eaf;
   --secondary-shadow: #a17a69;
+  --alice-blue: aliceblue;
 }
 /* Variables end */
 
@@ -112,8 +113,228 @@ nav ul li {
 .active{
     display: flex;
 }
-
 /* Navbar ends */
+
+/* start of home page style */
+/* main1 styling */
+.main1{
+    background-color: #EBFBFF;
+    width: 100%;
+    min-height: 80vh;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.main1 .column1{
+    width: 40%;
+}
+
+.main1 .column1 h1{
+    width: 100%;
+    margin-bottom: 20px;
+    font-weight: 600px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main1 .column1 p{
+    width: 100%;
+    margin-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.main1 .column2{
+    width: 40%;
+    min-height: 70%;
+}
+
+.main1 .column2 img{
+    border-radius: 10px;
+    width: 100%;
+    height: 40%;
+}
+
+@media only screen and (max-width:860px){
+    .main1{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 2em;
+    }
+
+    .main1 .column1{
+        width: 80%;
+        text-align: center;
+    }
+
+    .main1 .column2{
+        margin-top: 40px;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:530px){
+
+    .main1 .column1{
+        width: 100%;
+        text-align: center;
+    }
+
+    .main1 .column2{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:415px){
+
+    .main1 .column2{
+        height: 80%;
+        margin-bottom: -20px;
+    }
+}
+
+/* main2 styling*/
+
+.main2{
+    margin: auto;
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 70vh;
+    gap: 100px;
+}
+
+.main2 .column1{
+    width: 40%;
+    min-height: 70%;
+    overflow: hidden;
+}
+
+.main2 .column1 img{
+    border-radius: 10px;
+    width: 100%;
+    min-height: 70%;
+}
+
+.main2 .column2 h2{
+    min-height: 50%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.main2 .column2 p{
+    min-height: 30%;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.main2 .column2{
+    width: 50%;
+    min-height: 70%;
+}
+
+@media only screen and (max-width: 860px){
+    .main2{
+        display: flex;
+        width: 90%;
+        flex-direction: column-reverse;
+        padding: 2em;
+    }
+
+    .main2 .column1{
+        min-height: 50%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main2 .column2{
+        min-height: 50vh;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+
+    .main2 .column1{
+        min-height: 50%;
+        width: 80%;
+    }
+
+    .main2 .column2{
+        min-height: 50%;
+        width: 120%;
+    }
+}
+
+
+/* main3 styling */
+.main3{
+    background-color: #EBFBFF;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 80vh;
+    gap: 100px;
+    margin-bottom: -30px;
+}
+
+.main3 .column1{
+    width: 40%;
+}
+
+.main3 .column1 h1{
+    width: 100%;
+    margin-bottom: 20px;
+    font-weight: 600px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main3 .column1 p{
+    width: 100%;
+    margin-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.main3 .column2{
+    width: 40%;
+    min-height: 70%;
+}
+
+.main3 .column2 img{
+    border-radius: 10px;
+    width: 100%;
+    height: 40%;
+}
+
+@media only screen and (max-width: 860px){
+    .main3{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 2em;
+    }
+
+    .main3 .column1{
+        height: 30%;
+        width: 100%;
+    }
+
+    .main3 .column2{
+        min-height: 70%;
+        width: 100%;
+        text-align: center;
+    }
+}
+/* end of home page style */
 
 /* start of register container*/
 .register{
@@ -128,8 +349,15 @@ nav ul li {
 
 .register .column1{
     width: 50%;
-    padding: 2em;
-    margin-top: -100px;
+    padding: 2rem;
+    margin-top: -20rem;
+}
+
+.register .column1 h2{
+    width: 100%;
+    margin-bottom: 20px;
+    font-weight: 600px;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -144,11 +372,12 @@ nav ul li {
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 10px;
+    color: var(--primary-white);
 }
 
 
 .register form{
-    background-color: aliceblue;
+    background-color: var(--alice-blue);
     border-radius: 5px;
     padding: 2em;
     width: 100%;
@@ -197,6 +426,7 @@ form #terms{
 }
 /* end of register container */
 
+
 /* start of login container*/
 .login{
     width: 80%;
@@ -214,16 +444,17 @@ form #terms{
     margin-top: -100px;
 }
 
-.column1 .reg-guide{
+.column1 .login-guide{
     text-align: center;
     background-color: #6055A5;
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 10px;
+    color: var(--primary-white);
 }
 
 .login form{
-    background-color: aliceblue;
+    background-color: var(--alice-blue);
     border-radius: 5px;
     padding: 2em;
     width: 100%;
@@ -231,7 +462,7 @@ form #terms{
     justify-content: center;
 }
 
-form #email, #password, #login-btn{
+form #login-email, #login-password, #login-btn{
     width: 100%;
     padding: 1em;
     border-radius: 5px;
@@ -240,10 +471,9 @@ form #email, #password, #login-btn{
     border: 1px solid #3E3C49;;
 }
 
-form #email:hover, #password:hover{
+form #login-email:hover, #login-password:hover{
     border-color: #3E3C49;
 }
-
 
 form #login-btn{
     width: 100%;
@@ -255,10 +485,153 @@ form #login-btn{
     margin-bottom: 10px;
 }
 
+form #email-label, #password-label{
+    display:flex;
+    justify-content: end;
+    color: var(--secondary-color);
+    margin-top: -8px;
+    font-size: 12px;
+}
+
+.display-none{
+    display: none;
+}
+
 form #login-btn:hover{
     background-color: #6055A5;
 }
 /*end of login container*/
+
+
+/* start of user profile style */
+.user-profile{
+    width: 80%;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.user-profile .profile-details-card{
+    margin-top: -80px;
+    background-color: var(--alice-blue);
+    border-radius: 5px;
+    padding: 2em;
+    width: 40%;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-details-card .profile-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-transform: capitalize;
+}
+
+.user-profile .profile-update{
+    width: 45%;
+    padding: 2em;
+}
+
+.profile-update .update-guide{
+    text-align: center;
+    background-color: #6055A5;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: var(--primary-white);
+}
+
+
+.profile-update form{
+    background-color: var(--alice-blue);
+    border-radius: 5px;
+    padding: 2em;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+form #fname, #lname, #phone-no, #address, #state, #city, #update-btn, #profile-image{
+    width: 100%;
+    padding: 1em;
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: 700px;
+    border: 1px solid #3E3C49;;
+}
+
+form #fname:hover, #lname:hover, #phone-no:hover, #address:hover, #state, #city:hover{
+    border-color: #3E3C49;
+}
+
+.profile-picture{
+    width: 90%;
+    height: 60%;
+    border-radius: 50%;
+}
+
+form #update-btn{
+    width: 100%;
+    padding: 1em;
+    background-color: #38CC8C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+form #update-btn:hover{
+    background-color: #6055A5;
+}
+
+
+@media only screen and (max-width:1029.33px){
+    .user-profile{
+        width: 100%;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width:850px){
+    .user-profile{
+        display: flex;
+    }
+
+    .user-profile .profile-details-card{
+        margin-top: -150px;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .user-profile{
+        flex-direction: column;
+    }
+    
+    .user-profile .profile-details-card{
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    .user-profile .profile-update{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:450px){
+    .user-profile .profile-update{
+        width: 95%;
+    }
+}
+/* end of user profile style */
+
 
 /* start of footer*/
 footer{
@@ -452,6 +825,7 @@ footer .socials{
     cursor: pointer;
     transform: var(--transition);
 }
+
 #sidebar .items li:nth-child(1){
     border-left: 4px solid whitesmoke;
 }
@@ -765,8 +1139,8 @@ tbody tr td{
 /* end of media queries for admin dashboard */
 
 
-/* start of order style*/
-.order-section{
+/* start of service style*/
+.service-order-cards{
     display: flex;
     height: 80vh;
     width: 100%;
@@ -776,41 +1150,157 @@ tbody tr td{
     gap: 20px;
 }
 
-.order-section .card{
+.service-order-cards, h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: -90px;
+}
+
+.service-order-cards .service-card{
     display: flex;
+    padding: 0.5rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     height: 70%;
     width: 23%;
     border: 3px solid var(--primary-color);
     border-radius: 10px;
 }
 
-.card h1{
+.service-card h1{
     color: Black;
     font-size: 25px;
     font-weight: 5;
 }
 
-.card p{
+.service-card p{
     font-size: 14px;
     margin: 7px;
     color: black;
+    text-align: left;
 }
 
-.card a{
+.service-card a{
     border-radius: 15px;
     color: white;
     background-color: var(--primary-color);
     padding: 10px 30px;
+    
 }
 
-.card a:hover{
+.service-card a:hover{
     color: var(--primary-color);
     background-color: white;
     border: 1px solid var(--primary-color);
+}
+/* end of order style*/
+
+
+/* start of order style */
+
+.order-container{
+    display: flex;
+    border-radius: 10px;
+    padding: 1rem;
+    flex-direction: column;
+    height: 60vh;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 30px;
+    align-items: center;
+    background-color: var(--primary-white);
+    gap: 10px;
+    color: #38cc8c;
+    box-shadow: 3px 6px 9px;
+}
+
+.order-container hr{
+    width: 90%;
+}
+
+.order-container .head{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+    padding: 10px;
+    margin-bottom: -20px;
+}
+
+.order-container .surchage{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+
+}
+
+.order-container .head img{
+    width: 80px;
+    height: 8vh;
+}
+
+.order-container form{
+    width: 90%;
+}
+
+form #card-number, #expiry-date, #cvv, #payment-btn{
+    width: 100%;
+    display: flex;
+    gap: 2px;
+    padding: 8px 75px;
+    border-radius:5px;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid var(--primary-shadow)
+}
+
+form #card-number:hover, #expiry-date:hover, #cvv:hover{
+    border: 2px solid var(--primary-color);
+}
+
+form #payment-btn{
+    background-color:#38CC8C;
+    color: var(--primary-white);
+    border: none;
+}
+
+form #payment-btn:hover{
+    background: var(--primary-color);
+    color: var(--primary-white);
+    text-align: center;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width:846px){
+
+    input[type="text"]{
+        text-align-last: start;
+    }
+
+    .order-container{
+        display: flex;
+        width: 45%;
+    }
+
+    .order-container form{
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width:570px){
+    .order-container{
+        display: flex;
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width:431px){
+    .order-container{
+        display: flex;
+        width: 85%;
+    }
 }
 /* end of order style*/
 

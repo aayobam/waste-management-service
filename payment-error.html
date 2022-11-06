@@ -7,55 +7,37 @@
         <link rel="stylesheet" href="/assets/css/styles.css" />
 
         <!--favicon-->
-        <link rel="icon" type="image/png" href="assets/images/interswitch_logo.svg">
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <!-- Animate CSS CDN -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <title>Site Home | User Login</title>
+        <link rel="icon" type="image/png" href="/assets/images/interswitch_logo.svg">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+        <title>Site Home | Payment Success</title>
     </head>
 
     <body>
         <!-- Navbar -->
         <nav>
-            <a href="registration.html" class="nav-link"><img src="/assets/images/interswitch_logo.svg" alt="home-logo" id="home-logo"></a>
+            <a href="register.html" class="nav-link"><img src="/assets/images/interswitch_logo.svg" alt="home-logo" id="home-logo"></a>
             <a class="toggle-button">
                 <span class="bar"></span> 
-                <span class="bar"></span> 
-                <span class="bar"></span> 
+                <span class="bar"></span>
+                <span class="bar"></span>
             </a>
 
             <div class="navbar-links">
                 <ul id="mobile-nav" class="active hide">
-                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="login.html" class="nav-link">Login</a></li>
-                    <li><a href="registration.html" class="nav-link">Register</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="logout.html" class="nav-link">Projects</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </div>
             
         </nav>
 
-        <div class="login">
-            <div class="column1">
-                <div class="reg-guide">
-                    <h4>Login to your dashboard</h4>
-                </div>
-                <form action="register.html" method="post" enctype="multipart/form-data">
-                    
-                    <input type="email" name="email" id="email" placeholder="example@mail.com" required><br>
-
-                    <input type="password" name="password" id="password" placeholder="Enter password" required><br>
-    
-                    <div id="terms">
-                        <label for="terms">Do not have an account? <a href="registration.html">Click here to register.</a> or <a href="#">Forgot Password.</a></label>
-                    </div><br>
-    
-                    <input type="submit" value="Login" id="login-btn" name="login-btn">
-                </form>
-            </div>
+        <div class="failure-container">
+            <i class="fa-solid fa-file-circle-minus"></i>
+            <p>Payment unsuccessful.</p>
+            <p>Please <a href="#">try again</a> or <a href="#">contact our customer care</a> for assistance.</p>
         </div>
 
         <!-- Footer section -->

@@ -10,6 +10,19 @@ function indexNav(){
 indexNav();
 
 
+function loginFormValidation(){
+    let loginEmail = document.getElementById("login-email")
+    let loginPassword = document.getElementById("login-password")
+    if (loginEmail == ""){
+        let label = document.getElementById("fname-label")
+        firstname.style.borderColor = "#FF7A7A";
+        firstname.appendChild(linebreak);
+        label.innerHTML = "Firstname cannot be empty."
+        return false
+    }
+}
+
+
 function validateForm(){
     let firstname = document.getElementById("fname");
     let lastname = document.getElementById("lname");
